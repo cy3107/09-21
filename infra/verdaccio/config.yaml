@@ -1,0 +1,31 @@
+storage: ./storage
+plugins: ./plugins
+
+web:
+  title: Wallet Private Registry
+
+auth:
+  htpasswd:
+    file: ./htpasswd
+    max_users: 1000
+
+uplinks:
+  npmjs:
+    url: https://registry.npmjs.org/
+
+packages:
+  "@*/*":
+    access: $authenticated
+    publish: $authenticated
+    proxy: npmjs
+  "**":
+    access: $authenticated
+    publish: $authenticated
+    proxy: npmjs
+
+middlewares:
+  audit:
+    enabled: true
+
+logs:
+  - { type: stdout, format: pretty, level: http }

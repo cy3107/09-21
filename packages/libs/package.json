@@ -1,0 +1,34 @@
+{
+  "name": "@wallet/libs",
+  "version": "1.0.0",
+  "private": false,
+  "type": "module",
+  "source": "src/index.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.module.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.module.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "microbundle build --format cjs,es --tsconfig tsconfig.json",
+    "lint": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "microbundle": "^0.15.1",
+    "typescript": "^5.4.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "ethers": "^6.0.0"
+  },
+  "publishConfig": {
+    "registry": "http://localhost:4873"
+  }
+}

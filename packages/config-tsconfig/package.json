@@ -1,0 +1,8 @@
+{
+  "name": "@wallet/tsconfig",
+  "version": "1.0.0",
+  "private": false,
+  "files": [
+    "tsconfig.json"
+  ]
+}

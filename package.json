@@ -1,0 +1,26 @@
+{
+  "name": "wallet-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*",
+      "apps/*"
+    ]
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "build:packages": "turbo run build --filter=@wallet/libs --filter=@wallet/hooks",
+    "dev": "turbo run dev --parallel",
+    "lint": "turbo run lint",
+    "storybook": "turbo run storybook --parallel",
+    "storybook:build": "turbo run storybook:build"
+  },
+  "devDependencies": {
+    "turbo": "^2.1.2",
+    "typescript": "^5.4.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

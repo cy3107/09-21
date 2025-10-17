@@ -1,0 +1,15 @@
+{
+  "name": "verdaccio",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "verdaccio --config ./config.yaml",
+    "adduser": "npx verdaccio --config ./config.yaml --adduser"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "verdaccio": "^6.2.0"
+  }
+}

@@ -1,0 +1,2 @@
+function t(t,r){var e=void 0===r?{}:r,s=e.leading,l=void 0===s?6:s,a=e.trailing,i=void 0===a?4:a,n=e.separator,o=void 0===n?"…":n;if("string"!=typeof t||0===t.trim().length)return"";var d=t.trim();return d.length<=l+i?d:""+d.slice(0,l)+o+d.slice(-i)}function r(t,r){if("string"!=typeof t||0===t.trim().length)throw new Error(null!=r?r:"Wallet address must be a non-empty string.")}var e={formatWalletAddress:t,assertWalletAddress:r};exports.assertWalletAddress=r,exports.default=e,exports.formatWalletAddress=t;
+//# sourceMappingURL=index.cjs.map

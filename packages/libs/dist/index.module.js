@@ -1,0 +1,2 @@
+function t(t,r){var e=void 0===r?{}:r,i=e.leading,n=void 0===i?6:i,a=e.trailing,l=void 0===a?4:a,s=e.separator,o=void 0===s?"…":s;if("string"!=typeof t||0===t.trim().length)return"";var d=t.trim();return d.length<=n+l?d:""+d.slice(0,n)+o+d.slice(-l)}function r(t,r){if("string"!=typeof t||0===t.trim().length)throw new Error(null!=r?r:"Wallet address must be a non-empty string.")}var e={formatWalletAddress:t,assertWalletAddress:r};export{r as assertWalletAddress,e as default,t as formatWalletAddress};
+//# sourceMappingURL=index.module.js.map
